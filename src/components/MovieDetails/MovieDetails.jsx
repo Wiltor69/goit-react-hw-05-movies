@@ -8,10 +8,11 @@ export const MovieDetails = ({
 }) => {
   const posterUpl = 'https://image.tmdb.org/t/p/w500';
   const location = useLocation();
-  const goBack = location?.state?.from ?? '/movies';
+  const goBack = location?.state?.from ?? '/';
   return (
     <>
       <GoBack to={goBack}>Go Back</GoBack>
+
       <Block>
         <div>
           <img src={posterUpl + poster_path} alt={title} />
